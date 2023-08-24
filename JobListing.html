@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="D:\Documents\ZW\Sample Logo\sample.png" alt="company logo">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="JobListing.html">Job Listings</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav2>
+            
+        </nav2>
+    </header>
+
+
+    <section class="job-listings">
+        <h2>Featured Job Listings</h2>
+        <!-- Job listing cards will be generated here -->
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <!-- Service details will be presented here -->
+    </section>
+
+    <footer>
+    </footer>
+
+<script>
+    
+    const joblistings = [
+    { title: 'Software Engineer', location: 'San Francisco, CA', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+    { title: 'Marketing Specialist', location: 'New York, NY', description: 'Pellentesque ac ex vel est cursus lacinia.' },
+    // Populate job listings
+];
+const jobListingsContainer = document.querySelector('.job-listings');
+jobListings.forEach(job => {
+    const jobCard = document.createElement('div');
+    jobCard.classList.add('job-card');
+    jobCard.innerHTML = `
+        <h3>${job.title}</h3>
+        <p><strong>Location:</strong> ${job.location}</p>
+        <p>${job.description}</p>
+        <a href="#">Apply Now</a>
+    `;
+    jobListingsContainer.appendChild(jobCard);
+});
+</script>
+</body>
+</html>
+
+
